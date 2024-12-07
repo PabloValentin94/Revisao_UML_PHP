@@ -1,0 +1,5 @@
+# Definindo que, quando este arquivo for executado, ele deve procurar o arquivo especificado abaixo e executá-lo.
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ App/Index.php [QSA,L]
