@@ -1,5 +1,7 @@
 <?php
 
+    namespace App\DAO;
+
     use PDO;
     
     use Exception;

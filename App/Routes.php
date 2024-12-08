@@ -2,6 +2,18 @@
 
     use App\RoutesManager;
 
+    use App\Controller\
+    {
+
+        AparelhoController,
+        ClienteController,
+        ModeloController,
+        OrcamentoController,
+        TecnicoController,
+        TelefoneController
+
+    };
+
     $routes_manager = new RoutesManager();
 
     // GET.
