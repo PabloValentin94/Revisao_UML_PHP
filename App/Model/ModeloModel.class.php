@@ -5,9 +5,9 @@
     class ModeloModel extends Model
     {
 
-        private $id, $descricao;
+        private $id, $descricao, $ativo;
 
-        public function __construct(int $id = 0, string $descricao = "")
+        public function __construct(int $id = 0, string $descricao = "", int $ativo = 1)
         {
 
             if(empty($this->id))
@@ -16,6 +16,8 @@
                 $this->id = $id;
 
                 $this->descricao = $descricao;
+
+                $this->ativo = $ativo;
 
             }
             
@@ -29,9 +31,13 @@
 
         public function GET_Descricao() : string { return $this->descricao; }
 
+        public function GET_Ativo() : int { return $this->ativo; }
+
         public function SET_ID(int $parametro) : void { $this->id = $parametro; }
 
         public function SET_Descricao(string $parametro) : void { $this->descricao = $parametro; }
+
+        public function SET_Ativo(int $parametro) : void { $this->ativo = $parametro; }
 
     }
 

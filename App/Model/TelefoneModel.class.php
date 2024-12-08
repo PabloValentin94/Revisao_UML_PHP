@@ -5,9 +5,9 @@
     class TelefoneModel extends Model
     {
 
-        private $id, $ddd, $numero;
+        private $id, $ddd, $numero, $ativo;
 
-        public function __construct(int $id = 0, int $ddd = 0, string $numero = "")
+        public function __construct(int $id = 0, int $ddd = 0, string $numero = "", int $ativo = 1)
         {
 
             if(empty($this->id))
@@ -18,6 +18,8 @@
                 $this->ddd = $ddd;
 
                 $this->numero = $numero;
+
+                $this->ativo = $ativo;
 
             }
             
@@ -33,11 +35,15 @@
 
         public function GET_Numero() : string { return $this->numero; }
 
+        public function GET_Ativo() : int { return $this->ativo; }
+
         public function SET_ID(int $parametro) : void { $this->id = $parametro; }
 
         public function SET_DDD(int $parametro) : void { $this->ddd = $parametro; }
 
         public function SET_Numero(string $parametro) : void { $this->numero = $parametro; }
+
+        public function SET_Ativo(int $parametro) : void { $this->ativo = $parametro; }
 
     }
 

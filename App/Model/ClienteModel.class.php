@@ -2,12 +2,12 @@
 
     namespace App\Model;
 
-    class ClienteModel extends Model
+    class ClienteModel extends PessoaModel
     {
 
-        private $id, $cpf;
+        private $id, $cpf, $ativo;
 
-        public function __construct(int $id = 0, string $cpf = "")
+        public function __construct(int $id = 0, string $nome = "", string $cpf = "", int $ativo = 1)
         {
 
             if(empty($this->id))
@@ -16,6 +16,10 @@
                 $this->id = $id;
 
                 $this->cpf = $cpf;
+
+                $this->ativo = $ativo;
+
+                parent::__construct($nome);
 
             }
             
@@ -29,9 +33,13 @@
 
         public function GET_CPF() : string { return $this->cpf; }
 
+        public function GET_Ativo() : int { return $this->ativo; }
+
         public function SET_ID(int $parametro) : void { $this->id = $parametro; }
 
         public function SET_CPF(string $parametro) : void { $this->cpf = $parametro; }
+
+        public function SET_Ativo(int $parametro) : void { $this->ativo = $parametro; }
 
     }
 
