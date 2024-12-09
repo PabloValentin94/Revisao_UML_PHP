@@ -60,7 +60,7 @@
         public function Search(int $id) : object | false
         {
 
-            $sql = "SELECT * FROM Orcamento ORDER BY id ASC";
+            $sql = "SELECT * FROM Orcamento WHERE id = ? ORDER BY id ASC";
 
             $stmt = $this->connection->prepare($sql);
 

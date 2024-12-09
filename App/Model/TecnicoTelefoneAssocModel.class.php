@@ -23,8 +23,6 @@
             
         }
 
-
-
         // GET e SET.
 
         public function GET_ID() : int { return $this->id; }

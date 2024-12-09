@@ -84,7 +84,7 @@
         public function Search(int $id) : object | false
         {
 
-            $sql = "SELECT * FROM Aparelho ORDER BY id ASC";
+            $sql = "SELECT * FROM Aparelho WHERE id = ? ORDER BY id ASC";
 
             $stmt = $this->connection->prepare($sql);
 
