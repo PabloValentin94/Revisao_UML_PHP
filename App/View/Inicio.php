@@ -26,6 +26,10 @@
 
     <body>
 
+        <a href="<?= ROOT ?>/modelo"> Aba de Modelos de Aparelhos </a>
+
+        <a href="<?= ROOT ?>/aparelho"> Aba de Aparelhos </a>
+
         <a href="<?= ROOT ?>/cliente"> Aba de Clientes </a>
 
         <a href="<?= ROOT ?>/tecnico"> Aba de Técnicos </a>

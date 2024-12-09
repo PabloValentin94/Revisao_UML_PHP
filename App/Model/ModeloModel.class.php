@@ -2,6 +2,8 @@
 
     namespace App\Model;
 
+    use App\DAO\ModeloDAO;
+
     class ModeloModel extends Model
     {
 
@@ -23,7 +25,44 @@
             
         }
 
+        public function Save() : void
+        {
 
+            $dao = new ModeloDAO();
+
+            ($this->id === 0) ? $dao->Insert($this) : $dao->Update($this);
+
+        }
+
+        public function Add(int $id) : void
+        {
+
+            (new ModeloDAO())->Active($id);
+
+        }
+
+        public function Remove(int $id) : void
+        {
+
+            (new ModeloDAO())->Deactive($id);
+
+        }
+
+        public function List(?int $id = null)
+        {
+
+            $dao = new ModeloDAO();
+
+            $this->data = ($id === null) ? $dao->Select() : $dao->Search($id);
+
+            if($id !== null && $this->data === false)
+            {
+
+                $this->data = new ModeloModel();
+
+            }
+
+        }
 
         // GET e SET.
 

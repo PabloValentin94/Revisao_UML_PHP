@@ -20,7 +20,7 @@
 
         private $aparelhos;
 
-        public function __construct(int $id = 0, string $nome = "", string $cpf = "", int $ativo = 1, array $aparelhos = array())
+        public function __construct(int $id = 0, string $nome = "", string $cpf = "", int $ativo = 1)
         {
 
             if(empty($this->id))
@@ -31,15 +31,6 @@
                 $this->cpf = $cpf;
 
                 $this->ativo = $ativo;
-
-                $this->aparelhos = $aparelhos;
-
-                foreach((new ClienteTelefoneAssocDAO())->Select($this->id) as $telefone)
-                {
-
-                    $this->SET_Telefones((new TelefoneDAO())->Search($telefone->GET_FK_Telefone()));
-
-                }
 
                 parent::__construct($nome);
 

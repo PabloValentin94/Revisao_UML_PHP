@@ -17,11 +17,15 @@
         public function Insert(AparelhoModel $model) : void
         {
 
-            $sql = "INSERT INTO Aparelho(descricao) VALUES(?)";
+            $sql = "INSERT INTO Aparelho(descricao, fk_cliente, fk_modelo) VALUES(?, ?, ?)";
 
             $stmt = $this->connection->prepare($sql);
 
             $stmt->bindValue(1, $model->GET_Descricao());
+
+            $stmt->bindValue(2, $model->GET_FK_Cliente());
+
+            $stmt->bindValue(3, $model->GET_FK_Modelo());
 
             $stmt->execute();
 
@@ -30,13 +34,17 @@
         public function Update(AparelhoModel $model) : void
         {
 
-            $sql = "UPDATE Aparelho SET descricao = ? WHERE id = ?";
+            $sql = "UPDATE Aparelho SET descricao = ?, fk_cliente = ?, fk_modelo = ? WHERE id = ?";
 
             $stmt = $this->connection->prepare($sql);
 
             $stmt->bindValue(1, $model->GET_Descricao());
 
-            $stmt->bindValue(2, $model->GET_ID());
+            $stmt->bindValue(2, $model->GET_FK_Cliente());
+
+            $stmt->bindValue(3, $model->GET_FK_Modelo());
+
+            $stmt->bindValue(4, $model->GET_ID());
 
             $stmt->execute();
 

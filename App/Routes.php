@@ -20,6 +20,18 @@
 
     $routes_manager->Define("GET", "/", [VIEWS . "../Inicio.php"]);
 
+    $routes_manager->Define("GET", "/modelo", [ModeloController::class, "Form"]);
+
+    $routes_manager->Define("GET", "/modelo/alternar_ativacao", [ModeloController::class, "Toggle"]);
+
+    $routes_manager->Define("GET", "/modelo/listagem", [ModeloController::class, "List"]);
+
+    $routes_manager->Define("GET", "/aparelho", [AparelhoController::class, "Form"]);
+
+    $routes_manager->Define("GET", "/aparelho/alternar_ativacao", [AparelhoController::class, "Toggle"]);
+
+    $routes_manager->Define("GET", "/aparelho/listagem", [AparelhoController::class, "List"]);
+
     $routes_manager->Define("GET", "/cliente", [ClienteController::class, "Form"]);
 
     $routes_manager->Define("GET", "/cliente/alternar_ativacao", [ClienteController::class, "Toggle"]);
@@ -33,6 +45,10 @@
     $routes_manager->Define("GET", "/tecnico/listagem", [TecnicoController::class, "List"]);
 
     // POST.
+
+    $routes_manager->Define("POST", "/aparelho/salvar", [AparelhoController::class, "Save"]);
+
+    $routes_manager->Define("POST", "/modelo/salvar", [ModeloController::class, "Save"]);
 
     $routes_manager->Define("POST", "/cliente/salvar", [ClienteController::class, "Save"]);
 

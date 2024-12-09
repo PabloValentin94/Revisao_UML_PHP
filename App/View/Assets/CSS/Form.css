@@ -29,18 +29,20 @@ form label {
 
 }
 
-form input {
+form input, form select {
 
     border: 1px solid #000000;
     outline: none;
     font-size: 20px;
     text-align: center;
     padding: 5px;
+    cursor: pointer;
 
 }
 
-form input:focus {
+form input:focus, form select:focus {
 
     border-width: 2px;
+    cursor: initial;
 
 }

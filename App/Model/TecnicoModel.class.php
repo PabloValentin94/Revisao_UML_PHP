@@ -28,13 +28,6 @@
 
                 $this->ativo = $ativo;
 
-                foreach((new TecnicoTelefoneAssocDAO())->Select($this->id) as $telefone)
-                {
-
-                    $this->SET_Telefones((new TelefoneDAO())->Search($telefone->GET_FK_Telefone()));
-
-                }
-
                 parent::__construct($nome);
 
             }
