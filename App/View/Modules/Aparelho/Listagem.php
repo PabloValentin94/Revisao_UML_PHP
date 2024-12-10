@@ -10,11 +10,13 @@
 
         <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Listagem.css">
 
-        <title> Listagem de Modelos de Aparelhos </title>
+        <title> Listagem de Aparelhos </title>
 
     </head>
 
     <body>
+
+        <h1> Listagem de Aparelhos </h1>
 
         <div>
 
@@ -64,15 +66,7 @@
 
                         <tr>
 
-                            <td> NULL </td>
-
-                            <td> NULL </td>
-
-                            <td> NULL </td>
-
-                            <td> NULL </td>
-
-                            <td> NULL </td>
+                            <td colspan="5"> NULL </td>
 
                         </tr>
 

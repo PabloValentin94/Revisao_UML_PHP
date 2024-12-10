@@ -16,6 +16,8 @@
 
     <body>
 
+        <h1> Listagem de Modelos de Aparelhos </h1>
+
         <div>
 
             <table>
@@ -56,11 +58,7 @@
 
                         <tr>
 
-                            <td> NULL </td>
-
-                            <td> NULL </td>
-
-                            <td> NULL </td>
+                            <td colspan="3"> NULL </td>
 
                         </tr>
 

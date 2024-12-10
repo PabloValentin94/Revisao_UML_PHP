@@ -10,18 +10,20 @@
 
         <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/View/Assets/CSS/Form.css">
 
-        <title> Cadastro de Modelos de Aparelhos </title>
+        <title> Cadastro de Aparelhos </title>
 
     </head>
 
     <body>
+
+        <h1> Cadastro de Aparelhos </h1>
 
         <form action="<?= ROOT ?>/aparelho/salvar" method="post">
 
             <input type="hidden" name="id" id="id" inputmode="numeric" value="<?= $model[0]->GET_ID() ?>">
 
             <label for="descricao"> Descrição do Aparelho: </label>
-            <input type="text" name="descricao" id="descricao" value="<?= $model[0]->GET_Descricao() ?>" required>
+            <input type="text" name="descricao" id="descricao" value="<?= $model[0]->GET_Descricao() ?>" autocomplete="off" required>
 
             <label for="fk_cliente"> Proprietário: </label>
             <select name="fk_cliente" id="fk_cliente" required>

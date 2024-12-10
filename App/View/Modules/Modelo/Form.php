@@ -16,12 +16,14 @@
 
     <body>
 
+        <h1> Cadastro de Modelos de Aparelhos </h1>
+
         <form action="<?= ROOT ?>/modelo/salvar" method="post">
 
             <input type="hidden" name="id" id="id" inputmode="numeric" value="<?= $model->GET_ID() ?>">
 
             <label for="descricao"> Descrição do Modelo: </label>
-            <input type="text" name="descricao" id="descricao" value="<?= $model->GET_Descricao() ?>" required>
+            <input type="text" name="descricao" id="descricao" value="<?= $model->GET_Descricao() ?>" autocomplete="off" required>
 
             <div>
 

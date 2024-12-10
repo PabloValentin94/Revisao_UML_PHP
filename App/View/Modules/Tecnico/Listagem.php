@@ -16,6 +16,8 @@
 
     <body>
 
+        <h1> Listagem de Técnicos </h1>
+
         <div>
 
             <table>
@@ -60,13 +62,7 @@
 
                         <tr>
 
-                            <td> NULL </td>
-
-                            <td> NULL </td>
-
-                            <td> NULL </td>
-
-                            <td> NULL </td>
+                            <td colspan="4"> NULL </td>
 
                         </tr>
 

@@ -16,15 +16,17 @@
 
     <body>
 
+        <h1> Cadastro de Técnicos </h1>
+
         <form action="<?= ROOT ?>/tecnico/salvar" method="post">
 
             <input type="hidden" name="id" id="id" inputmode="numeric" value="<?= $model->GET_ID() ?>">
 
             <label for="nome"> Nome do Cliente: </label>
-            <input type="text" name="nome" id="nome" value="<?= $model->GET_Nome() ?>" required>
+            <input type="text" name="nome" id="nome" value="<?= $model->GET_Nome() ?>" autocomplete="off" required>
 
             <label for="especialidade"> Especialidade do Técnico: </label>
-            <input type="text" name="especialidade" id="especialidade" value="<?= $model->GET_Especialidade() ?>" required>
+            <input type="text" name="especialidade" id="especialidade" value="<?= $model->GET_Especialidade() ?>" autocomplete="off" required>
 
             <div>
 

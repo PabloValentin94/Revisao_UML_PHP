@@ -44,15 +44,23 @@
 
     $routes_manager->Define("GET", "/tecnico/listagem", [TecnicoController::class, "List"]);
 
+    $routes_manager->Define("GET", "/orcamento", [OrcamentoController::class, "Form"]);
+
+    $routes_manager->Define("GET", "/orcamento/apagar", [OrcamentoController::class, "Erase"]);
+
+    $routes_manager->Define("GET", "/orcamento/listagem", [OrcamentoController::class, "List"]);
+
     // POST.
 
-    $routes_manager->Define("POST", "/aparelho/salvar", [AparelhoController::class, "Save"]);
-
     $routes_manager->Define("POST", "/modelo/salvar", [ModeloController::class, "Save"]);
+
+    $routes_manager->Define("POST", "/aparelho/salvar", [AparelhoController::class, "Save"]);
 
     $routes_manager->Define("POST", "/cliente/salvar", [ClienteController::class, "Save"]);
 
     $routes_manager->Define("POST", "/tecnico/salvar", [TecnicoController::class, "Save"]);
+
+    $routes_manager->Define("POST", "/orcamento/salvar", [OrcamentoController::class, "Save"]);
 
     // Abrindo a rota especificada.
 

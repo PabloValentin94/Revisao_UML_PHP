@@ -17,7 +17,7 @@
         public function Insert(OrcamentoModel $model) : void
         {
 
-            $sql = "INSERT INTO Orcamento(data_orcamento, preco, data_validade) VALUES(?, ?, ?)";
+            $sql = "INSERT INTO Orcamento(data_orcamento, preco, data_validade, fk_tecnico, fk_aparelho) VALUES(?, ?, ?, ?, ?)";
 
             $stmt = $this->connection->prepare($sql);
 
@@ -26,6 +26,10 @@
             $stmt->bindValue(2, $model->GET_Preco());
 
             $stmt->bindValue(3, $model->GET_Data_Validade());
+
+            $stmt->bindValue(4, $model->GET_FK_Tecnico());
+
+            $stmt->bindValue(5, $model->GET_FK_Aparelho());
 
             $stmt->execute();
 

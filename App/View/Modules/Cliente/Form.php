@@ -16,15 +16,17 @@
 
     <body>
 
+        <h1> Cadastro de Clientes </h1>
+
         <form action="<?= ROOT ?>/cliente/salvar" method="post">
 
             <input type="hidden" name="id" id="id" inputmode="numeric" value="<?= $model->GET_ID() ?>">
 
             <label for="nome"> Nome do Cliente: </label>
-            <input type="text" name="nome" id="nome" value="<?= $model->GET_Nome() ?>" required>
+            <input type="text" name="nome" id="nome" value="<?= $model->GET_Nome() ?>" autocomplete="off" required>
 
             <label for="cpf"> CPF do Cliente: </label>
-            <input type="text" name="cpf" id="cpf" inputmode="numeric" value="<?= $model->GET_CPF() ?>" required>
+            <input type="text" name="cpf" id="cpf" inputmode="numeric" value="<?= $model->GET_CPF() ?>" autocomplete="off" required>
 
             <div>
 
